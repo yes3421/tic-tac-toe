@@ -1,12 +1,12 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "Cell.h"
+#include "Board.h"
 #include "Player.h"
 
 int main(int argc, char* argv[])
 {
-    Cell cell{};
+    Board board{};
     Player player{};
 
     return EXIT_SUCCESS;
