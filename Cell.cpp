@@ -2,12 +2,7 @@
 
 bool Cell::is_empty() const
 {
-    return _symbol == '\0';
-}
-
-void Cell::print() const
-{
-    
+    return _symbol == ' ';
 }
 
 char Cell::symbol() const

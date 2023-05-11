@@ -7,7 +7,8 @@
 int main(int argc, char* argv[])
 {
     Board board{};
-    Player player{};
+
+    board.print();
 
     return EXIT_SUCCESS;
 }

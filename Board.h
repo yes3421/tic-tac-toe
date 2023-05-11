@@ -1,7 +1,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <vector>
+#include <array>
+#include <iostream>
 
 #include "Cell.h"
 
@@ -10,7 +11,7 @@ public:
     void print() const;
 
 private:
-    std::vector<Cell> _board{};
+    std::array<Cell, 9> _board{};
 };
 
 #endif
