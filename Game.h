@@ -6,9 +6,10 @@
 
 class Game {
 public:
+    void play();
 
 private:
-    Board _board;
+    Board _board{};
 };
 
 #endif
