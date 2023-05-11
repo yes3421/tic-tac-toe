@@ -12,4 +12,9 @@ void Game::play()
     std::cin >> name;
     _player2.set_name(name);
 
+    std::cout << '\n';
+
+    _board.print();
+
+    std::cout << '\n';
 }
