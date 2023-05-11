@@ -1,5 +1,4 @@
 #include <cstdlib>
-#include <iostream>
 
 #include "Board.h"
 #include "Player.h"
