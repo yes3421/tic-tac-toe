@@ -1,13 +1,12 @@
 #include <cstdlib>
 
-#include "Board.h"
-#include "Player.h"
+#include "Game.h"
 
 int main(int argc, char* argv[])
 {
-    Board board{};
+    Game game{};
 
-    board.print();
+    game.play();
 
     return EXIT_SUCCESS;
 }
