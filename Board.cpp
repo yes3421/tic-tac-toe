@@ -9,3 +9,24 @@ void Board::print() const
         }
     }
 }
+
+bool Board::win() const
+{
+    // Horizontal
+
+    // Vertical
+
+    // Diagonal
+
+    return true;
+}
+
+bool Board::tie() const
+{
+    for (const auto& cell : _board) {
+        if (!cell.is_empty()) {
+            return true;
+        }
+    }
+    return false;
+}

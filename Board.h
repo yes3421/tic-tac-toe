@@ -10,6 +10,10 @@ class Board {
 public:
     void print() const;
 
+    bool win() const;
+
+    bool tie() const;
+
 private:
     std::array<Cell, 9> _board{};
 };
