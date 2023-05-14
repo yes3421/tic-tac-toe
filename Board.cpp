@@ -10,23 +10,11 @@ void Board::print() const
     }
 }
 
-bool Board::win() const
+bool horizontal_check() const
 {
-    // Horizontal
-
-    // Vertical
-
-    // Diagonal
-
-    return true;
-}
-
-bool Board::tie() const
-{
-    for (const auto& cell : _board) {
-        if (!cell.is_empty()) {
-            return true;
-        }
-    }
-    return false;
+    return (
+        (_board[0].symbol() == _board[1].symbol() == _board[2].symbol()) ||
+        (_board[3].symbol() == _board[4].symbol() == _board[5].symbol()) ||
+        (_board[6].symbol() == _board[7].symbol() == _board[8].symbol())
+    );
 }

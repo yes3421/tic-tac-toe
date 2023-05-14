@@ -10,11 +10,12 @@ class Board {
 public:
     void print() const;
 
-    bool win() const;
-
-    bool tie() const;
-
 private:
+    bool empty() const;
+    bool horizontal_check() const;
+    bool vertical_check() const;
+    bool diagonal_check() const;
+
     std::array<Cell, 9> _board{};
 };
 
