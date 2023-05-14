@@ -12,6 +12,8 @@ void Board::print() const
 
 void Board::write_at(int i, int j, char symbol)
 {
+    --i;
+    --j;
     _board[i*3 + j].set_symbol(symbol);
 }
 
