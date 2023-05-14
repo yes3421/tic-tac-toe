@@ -9,9 +9,9 @@
 class Board {
 public:
     void print() const;
+    void write_at(int i, int j, char c);
 
 private:
-    bool empty() const;
     bool horizontal_check() const;
     bool vertical_check() const;
     bool diagonal_check() const;

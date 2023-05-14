@@ -10,11 +10,20 @@ void Board::print() const
     }
 }
 
-bool horizontal_check() const
+bool Board::horizontal_check() const
 {
-    return (
-        (_board[0].symbol() == _board[1].symbol() == _board[2].symbol()) ||
-        (_board[3].symbol() == _board[4].symbol() == _board[5].symbol()) ||
-        (_board[6].symbol() == _board[7].symbol() == _board[8].symbol())
-    );
+    for (int i = 0; i < 9; i += 3) {
+        if (
+            (!_board[i].is_empty()) ||
+            (!_board[i + 1].is_empty()) ||
+            (!_board[i + 2].is_empty())
+        ) {
+            return (
+                _board[i].symbol() ==
+                _board[i + 1].symbol() ==
+                _board[i + 2].symbol()
+            );
+        }
+    }
+    return false;
 }
