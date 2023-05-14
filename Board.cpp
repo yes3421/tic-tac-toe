@@ -26,6 +26,11 @@ bool Board::win() const
     );
 }
 
+bool Board::tie() const
+{
+    return (!win()) && is_full();
+}
+
 bool Board::horizontal_check() const
 {
     bool flag = false;
@@ -94,4 +99,14 @@ bool Board::diagonal_check() const
         );
     }
     return flag;
+}
+
+bool Board::is_full() const
+{
+    for (const auto& cell : _board) {
+        if (cell.is_empty()) {
+            return false;
+        }
+    }
+    return true;
 }
