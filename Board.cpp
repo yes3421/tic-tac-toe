@@ -10,9 +10,9 @@ void Board::print() const
     }
 }
 
-void Board::write_at(int i, int j, char c)
+void Board::write_at(int i, int j, char symbol)
 {
-    _board[i*3 + j] = c;
+    _board[i*3 + j].set_symbol(symbol);
 }
 
 bool Board::horizontal_check() const
