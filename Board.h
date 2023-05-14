@@ -10,6 +10,7 @@ class Board {
 public:
     void print() const;
     void write_at(int i, int j, char c);
+    bool win() const;
 
 private:
     bool horizontal_check() const;
