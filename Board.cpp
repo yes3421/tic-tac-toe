@@ -10,6 +10,11 @@ void Board::print() const
     }
 }
 
+void Board::write_at(int i, int j, char c)
+{
+    _board[i*3 + j] = c;
+}
+
 bool Board::horizontal_check() const
 {
     bool flag = false;
