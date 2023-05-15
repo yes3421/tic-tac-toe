@@ -12,6 +12,8 @@ void Game::play()
     std::cin >> name;
     _player2.set_name(name);
 
+    char turn_symbol = 'X';
+
     while (!_board.win()) {
         std::cout << '\n';
 
@@ -28,7 +30,16 @@ void Game::play()
         std::cout << "Enter col: ";
         std::cin >> col;
 
-        _board.write_at(row, col, 'X');
+        if (turn_symbol == 'X') {
+            _board.write_at(row, col, turn_symbol);
+            turn_symbol = 'O';
+        }
+        else {
+            _board.write_at(row, col, turn_symbol);
+            turn_symbol = 'X';
+        }
     }
+    _board.print();
+
     std::cout << "FINISH\n";
 }

@@ -47,6 +47,10 @@ bool Board::horizontal_check() const
                 (_board[i + 1].symbol() == _board[i + 2].symbol())
             );
         }
+
+        if (flag) {
+            return flag;
+        }
     }
     return flag;
 }
@@ -66,6 +70,10 @@ bool Board::vertical_check() const
                 &&
                 (_board[i + 3].symbol() == _board[i + 6].symbol())
             );
+        }
+
+        if (flag) {
+            return flag;
         }
     }
     return flag;
