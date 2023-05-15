@@ -87,6 +87,10 @@ bool Board::diagonal_check() const
         );
     }
 
+    if (flag) {
+        return flag;
+    }
+
     if (
         (!_board[2].is_empty())
         || (!_board[4].is_empty())
