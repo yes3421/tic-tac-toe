@@ -2,9 +2,9 @@
 
 void Board::print() const
 {
-    for (int i = 0; i != 3; ++i) {
+    for (int i = 0; i < 9; i += 3) {
         std::cout << " " << _board[i].symbol() << " | " << _board[i + 1].symbol() << " | " << _board[i + 2].symbol() << '\n';
-        if (i != 2) {
+        if (i < 6) {
             std::cout << "---+---+---\n";
         }
     }

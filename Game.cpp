@@ -12,9 +12,23 @@ void Game::play()
     std::cin >> name;
     _player2.set_name(name);
 
-    std::cout << '\n';
+    while (!_board.win()) {
+        std::cout << '\n';
 
-    _board.print();
+        _board.print();
 
-    std::cout << '\n';
+        std::cout << '\n';
+
+        int row = 0;
+        int col = 0;
+
+        std::cout << "Enter row: ";
+        std::cin >> row;
+
+        std::cout << "Enter col: ";
+        std::cin >> col;
+
+        _board.write_at(row, col, 'X');
+    }
+    std::cout << "FINISH\n";
 }
