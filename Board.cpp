@@ -42,9 +42,9 @@ bool Board::horizontal_check() const
             || (!_board[i + 2].is_empty())
         ) {
             flag = (
-                _board[i].symbol()
-                == _board[i + 1].symbol()
-                == _board[i + 2].symbol()
+                (_board[i].symbol() == _board[i + 1].symbol())
+                &&
+                (_board[i + 1].symbol() == _board[i + 2].symbol())
             );
         }
     }
@@ -62,9 +62,9 @@ bool Board::vertical_check() const
             || (!_board[i + 6].is_empty())
         ) {
             flag = (
-                _board[i].symbol()
-                == _board[i + 3].symbol()
-                == _board[i + 6].symbol()
+                (_board[i].symbol() == _board[i + 3].symbol())
+                &&
+                (_board[i + 3].symbol() == _board[i + 6].symbol())
             );
         }
     }
@@ -81,9 +81,9 @@ bool Board::diagonal_check() const
         || (!_board[8].is_empty())
     ) {
         flag = (
-            _board[0].symbol()
-            == _board[4].symbol()
-            == _board[8].symbol()
+            (_board[0].symbol() == _board[4].symbol())
+            &&
+            (_board[4].symbol() == _board[8].symbol())
         );
     }
 
@@ -93,9 +93,9 @@ bool Board::diagonal_check() const
         || (!_board[6].is_empty())
     ) {
         flag = (
-            _board[2].symbol()
-            == _board[4].symbol()
-            == _board[6].symbol()
+            (_board[2].symbol() == _board[4].symbol())
+            &&
+            (_board[4].symbol() == _board[6].symbol())
         );
     }
     return flag;
