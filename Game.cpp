@@ -14,15 +14,18 @@ void Game::play()
 
     char turn_symbol = 'X';
 
-    while (_board.is_full() || (!_board.win())) {
+    int row = 0;
+    int col = 0;
+
+    while (!_board.win()) {
+        if (_board.is_full()) {
+            break;
+        }
         std::cout << '\n';
 
         _board.print();
 
         std::cout << '\n';
-
-        int row = 0;
-        int col = 0;
 
         std::cout << "Enter row: ";
         std::cin >> row;
