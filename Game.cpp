@@ -14,7 +14,7 @@ void Game::play()
 
     char turn_symbol = 'X';
 
-    while (!_board.win()) {
+    while (_board.is_full() || (!_board.win())) {
         std::cout << '\n';
 
         _board.print();
@@ -39,7 +39,11 @@ void Game::play()
             turn_symbol = 'X';
         }
     }
+    std::cout << '\n';
+
     _board.print();
+
+    std::cout << '\n';
 
     std::cout << "FINISH\n";
 }

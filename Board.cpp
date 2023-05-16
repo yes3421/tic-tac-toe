@@ -26,11 +26,6 @@ bool Board::win() const
     );
 }
 
-bool Board::tie() const
-{
-    return (!win()) && is_full();
-}
-
 bool Board::horizontal_check() const
 {
     bool flag = false;
