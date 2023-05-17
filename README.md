@@ -14,4 +14,4 @@ The player draws a board that consists of a three-by-three grid. One of the two 
 
 ## References
 
-Larman, C. (2002). Applying UML and patterns: An introduction to object-oriented analysis and design and the Unified Process. Prentice Hall.
+Larman, C. (2005). Applying UML and patterns: An introduction to object-oriented analysis and design and the Unified Process. Prentice Hall.
