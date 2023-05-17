@@ -1,6 +1,6 @@
 # tic-tac-toe
 
-The following information shows
+The following information shows a brief draft of the design process. It is not an accurate description of what you will find if you navigate the source code.
 
 ## Use Case
 
