@@ -13,6 +13,9 @@ public:
     void play();
 
 private:
+    void set_players_name();
+    void board_interaction();
+
     Board _board{};
     Player _player1{};
     Player _player2{};

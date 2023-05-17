@@ -131,3 +131,10 @@ bool Board::is_full() const
     }
     return true;
 }
+
+void Board::clean()
+{
+    for (auto& cell : _board) {
+        cell.set_symbol(' ');
+    }
+}

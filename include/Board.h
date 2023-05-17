@@ -12,6 +12,7 @@ public:
     void write_at(int i, int j);
     bool win() const;
     bool is_full() const;
+    void clean();
 
 private:
     bool horizontal_check() const;

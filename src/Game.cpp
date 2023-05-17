@@ -2,6 +2,29 @@
 
 void Game::play()
 {
+    set_players_name();
+
+    char option = 'Y';
+
+    while (option == 'Y') {
+        board_interaction();
+
+        std::cout << "Would you like to play again? [Y/n] ";
+        std::cin >> option;
+
+        if (option == 'n') {
+            break;
+        }
+
+        _board.clean();
+    }
+    std::cout << '\n';
+
+    std::cout << "FINISH\n";
+}
+
+void Game::set_players_name()
+{
     std::string name;
 
     std::cout << "Enter player's 1 name: ";
@@ -11,9 +34,10 @@ void Game::play()
     std::cout << "Enter player's 2 name: ";
     std::cin >> name;
     _player2.set_name(name);
+}
 
-    char turn_symbol = 'X';
-
+void Game::board_interaction()
+{
     int row = 0;
     int col = 0;
 
@@ -40,14 +64,4 @@ void Game::play()
     _board.print();
 
     std::cout << '\n';
-
-    if (turn_symbol == 'X') {
-        std::cout << "X's won!\n";
-        std::cout << "Congratulations! " << _player1.name() << '\n';
-    }
-    else {
-        std::cout << "O's won!\n";
-        std::cout << "Congratulations! " << _player2.name() << '\n';
-    }
-    std::cout << "FINISH\n";
 }
