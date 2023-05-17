@@ -14,7 +14,15 @@ void Board::write_at(int i, int j, char symbol)
 {
     --i;
     --j;
-    _board[i*3 + j].set_symbol(symbol);
+
+    if (_board[i*3 + j].is_empty()) {
+        _board[i*3 + j].set_symbol(symbol);
+    }
+    else{
+        std::cout << '\n';
+
+        std::cerr << "Cannot overwrite cell\n";
+    }
 }
 
 bool Board::win() const
