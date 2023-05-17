@@ -14,13 +14,15 @@ public:
     bool is_full() const;
     void clean();
 
+    char turn_symbol() const;
+
 private:
     bool horizontal_check() const;
     bool vertical_check() const;
     bool diagonal_check() const;
 
     std::array<Cell, 9> _board{};
-    char turn_symbol{'X'};
+    char _turn_symbol{'X'};
 };
 
 #endif

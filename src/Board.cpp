@@ -16,12 +16,12 @@ void Board::write_at(int i, int j)
     --j;
 
     if (_board[i*3 + j].is_empty()) {
-        _board[i*3 + j].set_symbol(turn_symbol);
-        if (turn_symbol == 'X') {
-            turn_symbol = 'O';
+        _board[i*3 + j].set_symbol(_turn_symbol);
+        if (_turn_symbol == 'X') {
+            _turn_symbol = 'O';
         }
         else {
-            turn_symbol = 'X';
+            _turn_symbol = 'X';
         }
     }
     else{
@@ -137,4 +137,9 @@ void Board::clean()
     for (auto& cell : _board) {
         cell.set_symbol(' ');
     }
+}
+
+char Board::turn_symbol() const
+{
+    return _turn_symbol;
 }

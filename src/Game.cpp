@@ -64,4 +64,13 @@ void Game::board_interaction()
     _board.print();
 
     std::cout << '\n';
+
+    if (_board.win()) {
+        if (_board.turn_symbol() != 'X') {
+            std::cout << "X's won. Congratulations! " << _player1.name() << '\n' << '\n';
+        }
+        else {
+            std::cout << "O's won. Congratulations! " << _player2.name() << '\n' << '\n';
+        }
+    }
 }
