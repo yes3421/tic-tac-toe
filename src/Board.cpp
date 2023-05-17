@@ -10,13 +10,19 @@ void Board::print() const
     }
 }
 
-void Board::write_at(int i, int j, char symbol)
+void Board::write_at(int i, int j)
 {
     --i;
     --j;
 
     if (_board[i*3 + j].is_empty()) {
-        _board[i*3 + j].set_symbol(symbol);
+        _board[i*3 + j].set_symbol(turn_symbol);
+        if (turn_symbol == 'X') {
+            turn_symbol = 'O';
+        }
+        else {
+            turn_symbol = 'X';
+        }
     }
     else{
         std::cout << '\n';

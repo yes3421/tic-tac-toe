@@ -33,14 +33,7 @@ void Game::play()
         std::cout << "Enter col: ";
         std::cin >> col;
 
-        if (turn_symbol == 'X') {
-            _board.write_at(row, col, turn_symbol);
-            turn_symbol = 'O';
-        }
-        else {
-            _board.write_at(row, col, turn_symbol);
-            turn_symbol = 'X';
-        }
+        _board.write_at(row, col);
     }
     std::cout << '\n';
 
@@ -55,17 +48,6 @@ void Game::play()
     else {
         std::cout << "O's won!\n";
         std::cout << "Congratulations! " << _player2.name() << '\n';
-    }
-
-    char option = '\0';
-
-    std::cout << "Would you like to play again? [Y/n] ";
-    std::cin >> option;
-
-    std::cout << '\n';
-
-    if (option == 'Y') {
-        play();
     }
     std::cout << "FINISH\n";
 }
