@@ -15,6 +15,7 @@ The player draws a board that consists of a three-by-three grid. One of the two 
 <p align="center">
 <img src="docs/GameSequenceDiagram.png">
 <\p>
+
 ## Class Diagram
 
 ![](/docs/GameClassDiagram.png)
