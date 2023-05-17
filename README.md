@@ -12,7 +12,11 @@ The player draws a board that consists of a three-by-three grid. One of the two 
 
 ## Sequence Diagram
 
+![](/docs/GameSequenceDiagram.png)
+
 ## Class Diagram
+
+![](/docs/GameClassDiagram.png)
 
 ## References
 
