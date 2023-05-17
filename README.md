@@ -8,6 +8,8 @@ The player draws a board that consists of a three-by-three grid. One of the two 
 
 ## Domain Model
 
+![](/docs/GameDomainModel.png)
+
 ## Sequence Diagram
 
 ## Class Diagram
